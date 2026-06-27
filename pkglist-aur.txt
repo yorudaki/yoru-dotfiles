@@ -1,0 +1,5 @@
+bibata-cursor-theme
+graphite-gtk-theme
+libcava
+zapzap
+zscroll-git

@@ -1,0 +1,7 @@
+2026-06-24 02:06:29.319 [info] StorageMainService: creating application shared storage
+2026-06-24 02:06:29.371 [info] [shared storage] Creating shared storage database at '/home/breno/.vscode-oss-shared/sharedStorage/state.vscdb' (wasCreated: false)
+2026-06-24 02:06:29.372 [info] [shared storage] Initializing fallback application storage (path: /home/breno/.config/Code - OSS/User/globalStorage/state.vscdb)
+2026-06-24 02:06:29.403 [info] [shared storage] Fallback application storage initialized with 3 items
+2026-06-24 02:06:29.404 [info] update#setState disabled
+2026-06-24 02:06:29.404 [info] update#ctor - updates are disabled as there is no update URL
+2026-06-24 02:07:43.536 [info] Extension host with pid 42657 exited with code: 0, signal: unknown.

@@ -1,0 +1,5 @@
+all packages PACMAN
+pacman -Qqen
+
+all packages AUR
+pacman -Qqem

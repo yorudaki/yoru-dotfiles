@@ -1,0 +1,1 @@
+2026-06-24 14:16:26.264 [error] Failed to set sticky bit on /tmp/breno-code-oss-zsh: Error: ENOENT: no such file or directory, chmod '/tmp/breno-code-oss-zsh'

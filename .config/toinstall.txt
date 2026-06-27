@@ -1,0 +1,24 @@
+﻿Btop
+CURSOR: Bibata
+fastfetch
+FONT:jetbrains mono nerd
+FONT:fira code font
+discord
+grimblast
+ghostty
+gparted
+imv
+libreoffice
+micro
+nautilus
+hyprpaper
+hyprpicker
+hyprpolkitagent
+rofi
+spotify
+starship
+swaync
+waybar
+yay
+zapzap
+zen
