@@ -8,11 +8,12 @@
     // Choose the order of the modules
     
     "modules-left": [
-        "hyprland/workspaces",
-        "group/media"    
+        "group/media",
+        "group/windows"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
+        
     ],
     "modules-right": [            
         "group/icons",
@@ -62,6 +63,17 @@
 		"tooltip": false
 	},
 
+    "group/windows":{
+        "orientation": "horizontal",
+        "modules": ["custom/text-windowcounticon","hyprland/windowcount"]
+    },
+    "hyprland/windowcount": {
+        "format": "{}"        
+    },
+    "custom/text-windowcounticon":{
+        "format": "󱂬 "
+    },
+
     "group/media": {
         "orientation": "horizontal",
         "modules": [
@@ -85,11 +97,11 @@
         "modules": ["custom/media-prev", "custom/media-playpause", "custom/media-next"]
     },
     "custom/media-playpause": {
-        "format": "",
+        "format": "󰐎 ",
         "on-click": "playerctl play-pause"
     },
     "custom/media-prev": {
-        "format": "",
+        "format": " ",
         "on-click": "playerctl previous"
     },
     "custom/media-next": {
@@ -216,7 +228,32 @@
 
 
 
+    /*
+    // CSS BACKUP CONFIGS
+     BLUETOOTH ANIMATION
 
+#custom-text-bluetooth{
+	font-size: 0px;	
+	color: transparent;
+
+	padding: 0px;
+	margin: 0px;
+
+	transition: all 0.25s cubic-bezier(0.25, 0.50, 0.25, 1);
+}
+#bluetooth {
+	margin-right: 0px;
+	padding: 0px 2px;;
+}
+#g-bluetooth:hover {
+	padding: 0px 16px;
+}
+#g-bluetooth:hover #custom-text-bluetooth {
+	font-size: 15px;
+	color: #ffffff;
+	margin-left: 8px;
+}
+    */
 
 
 
