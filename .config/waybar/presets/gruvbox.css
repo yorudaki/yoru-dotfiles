@@ -1,5 +1,6 @@
 @define-color bg1 #1d2021;
 @define-color bg2 #282828;
+@define-color bg3 #665c54;
 @define-color text #fffae7;
 @define-color text-dark #787566;
 
@@ -37,6 +38,8 @@
 window#waybar {
 	background-color: #282828;
 	color: @text;
+
+	box-shadow: inset 0 -3px 0 @bg3;
 }
 
 /* margin for polar modules */
@@ -135,7 +138,9 @@ window#waybar {
 
 /* WORKSPACES */
 #workspaces {
-	background-color: @bg1;	
+	background-color: @bg1;
+
+	box-shadow: inset 0 -3px 0 #504945;
 }
 
 #workspaces button {
