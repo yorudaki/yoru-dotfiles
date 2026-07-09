@@ -1,24 +1,19 @@
-// -*- mode: jsonc -*-
-{
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
-    //"width": 1920,
-    "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
+{    
+    "height": 30,
+    "spacing": 10,
     
     "modules-left": [
         "group/media",
-        "group/windows"
+        "group/windows"        
     ],
     "modules-center": [
         "hyprland/workspaces"
         
     ],
-    "modules-right": [            
+    "modules-right": [
         "group/icons",
+        "bluetooth",
         "pulseaudio",
-        "group/g-bluetooth",
         "group/datetime",
         "custom/swaync"
     ],
@@ -30,7 +25,6 @@
 
     // USED MODULES
     //
-
     "group/icons":{
         "orientation": "horizontal",
         "modules": [
@@ -59,7 +53,8 @@
 	},
 
 	"hyprland/window": {
-		"format": "{initialTitle}",
+		"format": "",
+        "icon": true,
 		"tooltip": false
 	},
 
@@ -81,7 +76,8 @@
             "custom/media-animation",
             "custom/media-now-playing",
             "group/media-control"
-        ]
+        ],
+        "tooltip": false
     },
     "custom/text-mediaicon": { //    
         "format": "󰎇 "
@@ -127,24 +123,24 @@
     },
 
     "tray": {
-        "icon-size": 18,
+        "icon-size": 17,
         "spacing": 10        
     },
     
     "group/datetime": {
     	"orientation": "horizontal",
     	"modules": [
-    		"clock#date",
-    		"clock#time"
+    		"clock#time",
+    		"clock#date"
     	]
     },
     "clock#time": {
-    	"format": "    {:%H:%M}",
+    	"format": "{:%H:%M}",
     	"timezone": "America/Sao_Paulo",
     	"tooltip": false
     },
     "clock#date": {
-		"format": "   {:%d/%m/%Y}",
+		"format": "{:%d/%m/%Y}",
         "tooltip-format": "<big>{:%A}</big>\n<tt><small>{calendar}</small></tt>",    	
     },
 
@@ -158,7 +154,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}%",    
+        "format": "{icon} {volume}%",    
         "format-icons": {            
             "default": ["", "", " "]
         },
@@ -185,8 +181,8 @@
 
     "bluetooth": {
         "format": "",
-        "format-disabled": "󰂲",
-        "format=connected": "󰂱",
+        "format-disabled": "󰂲 ",
+        "format=connected": "󰂱 ",
         "format-connected-battery": "󰂱 {icon}",
         "format-icons": [
             //low-full
@@ -222,7 +218,6 @@
         "tooltip": false,
         "on-click-right": ""
     },
-
     //
     // END
 
