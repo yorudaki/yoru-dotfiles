@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/marshadow-mod.png",
+    "type": "kitty",
+    "width": 30,    
+    "padding": {
+      "top": 0,
+      "left": 0
+    }
+  },
+  "padding": {
+      "top": 1,
+      "right": 3
+    },  
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "#ff633f",
+        "at": "#FF965A",
+        "host": "#FFEF87"
+      }
+    },
+    "break",
+    "separator",
+    "break",
+    {
+      "type": "os",
+      "key": "󰻀",
+      "keyColor": "#89DCEB"
+    },
+    {
+      "type": "cpu",
+      "key": "",
+      "keyColor": "#F5C2E7"
+    },
+    {
+      "type": "gpu",
+      "key": "󰋴",
+      "keyColor": "#FAB387"
+    },
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "#A6E3A1",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "",
+      "keyColor": "#94E2D5"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+2026-06-28 13:34:22.347 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2026-06-28 13:34:22.347 [info] ConversationFeature: Waiting for copilot token or BYOK model to activate conversation feature
+2026-06-28 13:34:22.347 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without a Copilot token source
+2026-06-28 13:34:22.347 [info] [CopilotCLIModels] Skipping model fetch since there is no Copilot token source
+2026-06-28 13:34:22.347 [info] BYOK: registered 9 provider(s): ollama, anthropic, gemini, xai, openai, openrouter, azure, customoai, customendpoint
+2026-06-28 13:34:22.347 [info] BYOK: fetching known models list
+2026-06-28 13:34:22.347 [info] Using the Electron fetcher.
+2026-06-28 13:34:22.347 [info] activationBlocker from 'languageModelAccess' took for 56ms
+2026-06-28 13:34:22.347 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:22.347 [error] [CopilotCLISDK] Failed to initialize logger: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:22.347 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:22.347 [error] Failed to initialize Copilot CLI Session Manager: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:22.348 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:22.348 [info] BYOK: Copilot Chat known models list fetched successfully.
+2026-06-28 13:34:22.348 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without a Copilot token source
+2026-06-28 13:34:22.348 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2026-06-28 13:34:22.348 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2026-06-28 13:34:22.348 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2026-06-28 13:34:22.348 [info] [CopilotCLI] MCP server started. Lock file: /home/breno/.local/state/.copilot/ide/c773db40-6e9c-46fe-af76-280d6e5f4214.lock
+2026-06-28 13:34:22.348 [info] [CopilotCLI] Server URI: unix:/tmp/mcp-nXWgK6/mcp.sock#%2Fmcp
+2026-06-28 13:34:22.497 [info] Logged in as BrenoAlbert
+2026-06-28 13:34:22.952 [info] Got Copilot token for BrenoAlbert
+2026-06-28 13:34:22.952 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 13:34:22.971 [info] [context keys] Setting context key: github.copilot-chat.activated
+2026-06-28 13:34:23.061 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 13:34:23.061 [info] copilot token sku: free_limited_copilot
+2026-06-28 13:34:23.061 [info] ConversationFeature: Activating contributions
+2026-06-28 13:34:23.061 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2026-06-28 13:34:23.077 [info] Registering default platform agent...
+2026-06-28 13:34:23.081 [info] activationBlocker from 'conversationFeature' took for 1273ms
+2026-06-28 13:34:23.128 [info] GithubAvailableEmbeddingTypesManager: Got embeddings. Primary: metis-1024-I16-Binary. Deprecated: 
+2026-06-28 13:34:23.130 [info] WorkspaceChunkSearchService: using embedding type metis-1024-I16-Binary
+2026-06-28 13:34:23.131 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:23.131 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:23.132 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:23.168 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:23.193 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:34:23.603 [info] Fetched model metadata in 1775ms 2c009eb8-bb3d-4942-8830-17c4701876ed
+2026-06-28 13:34:23.734 [info] Latest entry: ccreq:latest.copilotmd
+2026-06-28 13:34:23.735 [info] ccreq:3efd5560.copilotmd | markdown
+2026-06-28 13:34:23.750 [info] ConversationFeature: BYOK models available
+2026-06-28 13:34:23.750 [info] copilot token sku: free_limited_copilot
+2026-06-28 13:38:26.213 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:38:47.725 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:38:52.039 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:39:17.677 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:39:40.128 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:40:42.228 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:43:13.678 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:45:06.534 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 13:55:03.282 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:17:18.830 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:17:22.195 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:17:23.769 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:17:24.754 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:18:00.910 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:18:01.756 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:18:57.095 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:19:58.458 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:26:13.882 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:29:23.760 [info] Logged in as BrenoAlbert
+2026-06-28 14:29:24.196 [info] Got Copilot token for BrenoAlbert
+2026-06-28 14:29:24.196 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 14:29:24.228 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 14:29:24.228 [info] copilot token sku: free_limited_copilot
+2026-06-28 14:29:24.230 [info] [code-referencing] Public code references are enabled.
+2026-06-28 14:29:24.233 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:29:24.233 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:29:24.233 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 14:29:24.993 [info] Fetched model metadata in 766ms 07cfac8d-8090-4e28-86dc-7f2ef7cc5372
+2026-06-28 14:29:25.119 [info] ccreq:2d82606a.copilotmd | markdown
+2026-06-28 15:25:24.237 [info] Logged in as BrenoAlbert
+2026-06-28 15:25:24.838 [info] Got Copilot token for BrenoAlbert
+2026-06-28 15:25:24.838 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 15:25:24.858 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 15:25:24.858 [info] copilot token sku: free_limited_copilot
+2026-06-28 15:25:24.859 [info] [code-referencing] Public code references are enabled.
+2026-06-28 15:25:24.861 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 15:25:24.861 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 15:25:24.861 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 15:25:25.505 [info] Fetched model metadata in 648ms 955869a4-e29b-4900-ac59-6e91e5bb8475
+2026-06-28 15:25:25.646 [info] ccreq:1df92665.copilotmd | markdown
+2026-06-28 16:21:24.871 [info] Logged in as BrenoAlbert
+2026-06-28 16:21:25.356 [info] Got Copilot token for BrenoAlbert
+2026-06-28 16:21:25.356 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 16:21:25.377 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 16:21:25.377 [info] copilot token sku: free_limited_copilot
+2026-06-28 16:21:25.379 [info] [code-referencing] Public code references are enabled.
+2026-06-28 16:21:25.380 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 16:21:25.380 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 16:21:25.380 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 16:21:25.983 [info] Fetched model metadata in 606ms d659b3c6-1491-44e8-b3a7-533ddf4c4fb6
+2026-06-28 16:21:26.111 [info] ccreq:8db5e098.copilotmd | markdown
+2026-06-28 17:17:25.384 [info] Logged in as BrenoAlbert
+2026-06-28 17:17:25.843 [info] Got Copilot token for BrenoAlbert
+2026-06-28 17:17:25.843 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 17:17:25.861 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 17:17:25.861 [info] copilot token sku: free_limited_copilot
+2026-06-28 17:17:25.863 [info] [code-referencing] Public code references are enabled.
+2026-06-28 17:17:25.864 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:17:25.864 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:17:25.864 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:17:26.478 [info] Fetched model metadata in 617ms 96900f77-b3d8-4675-933d-30b55d3a278a
+2026-06-28 17:17:26.605 [info] ccreq:ac90c5a7.copilotmd | markdown
+2026-06-28 17:31:36.545 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:32:30.668 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:32:42.216 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:40:12.544 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:40:13.974 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:40:16.468 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 17:41:10.417 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:02:45.006 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:13:25.865 [info] Logged in as BrenoAlbert
+2026-06-28 18:13:26.338 [info] Got Copilot token for BrenoAlbert
+2026-06-28 18:13:26.338 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 18:13:26.357 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 18:13:26.357 [info] copilot token sku: free_limited_copilot
+2026-06-28 18:13:26.359 [info] [code-referencing] Public code references are enabled.
+2026-06-28 18:13:26.360 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:13:26.360 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:13:26.360 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:13:26.987 [info] Fetched model metadata in 630ms f3b29305-d65d-4eca-a797-8bacd2a6742b
+2026-06-28 18:13:27.118 [info] ccreq:9a18a7ee.copilotmd | markdown
+2026-06-28 18:24:05.191 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:27:52.778 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 18:31:27.982 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:09:26.371 [info] Logged in as BrenoAlbert
+2026-06-28 19:09:26.803 [info] Got Copilot token for BrenoAlbert
+2026-06-28 19:09:26.804 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 19:09:26.823 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 19:09:26.823 [info] copilot token sku: free_limited_copilot
+2026-06-28 19:09:26.825 [info] [code-referencing] Public code references are enabled.
+2026-06-28 19:09:26.827 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:09:26.827 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:09:26.827 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:09:27.461 [info] Fetched model metadata in 638ms 96f690be-bae7-4ad1-9fd4-aa75a3f28122
+2026-06-28 19:09:27.589 [info] ccreq:3f57c1ca.copilotmd | markdown
+2026-06-28 19:15:11.129 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:19:22.599 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 19:19:23.964 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 20:05:26.836 [info] Logged in as BrenoAlbert
+2026-06-28 20:05:27.320 [info] Got Copilot token for BrenoAlbert
+2026-06-28 20:05:27.320 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 20:05:27.339 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 20:05:27.339 [info] copilot token sku: free_limited_copilot
+2026-06-28 20:05:27.341 [info] [code-referencing] Public code references are enabled.
+2026-06-28 20:05:27.343 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 20:05:27.343 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 20:05:27.343 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 20:05:28.170 [info] Fetched model metadata in 831ms 66257291-25b8-4d65-9820-2e52fe2d015c
+2026-06-28 20:05:28.301 [info] ccreq:d51ec9c1.copilotmd | markdown
+2026-06-28 21:01:27.351 [info] Logged in as BrenoAlbert
+2026-06-28 21:01:28.047 [info] Got Copilot token for BrenoAlbert
+2026-06-28 21:01:28.047 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 21:01:28.090 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 21:01:28.090 [info] copilot token sku: free_limited_copilot
+2026-06-28 21:01:28.092 [info] [code-referencing] Public code references are enabled.
+2026-06-28 21:01:28.094 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:01:28.094 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:01:28.094 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:01:28.759 [info] Fetched model metadata in 669ms af761297-53bf-4c91-a27c-03ee70c879fd
+2026-06-28 21:01:28.901 [info] ccreq:7ccb2363.copilotmd | markdown
+2026-06-28 21:57:28.095 [info] Logged in as BrenoAlbert
+2026-06-28 21:57:28.510 [info] Got Copilot token for BrenoAlbert
+2026-06-28 21:57:28.510 [info] Copilot Chat: 0.53.0, VS Code: 1.125.0
+2026-06-28 21:57:28.530 [info] AuthenticationService: firing onDidAuthenticationChange from handleAuthChangeEvent. Has token: true
+2026-06-28 21:57:28.530 [info] copilot token sku: free_limited_copilot
+2026-06-28 21:57:28.532 [info] [code-referencing] Public code references are enabled.
+2026-06-28 21:57:28.533 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:57:28.533 [error] [CopilotCLISession] Failed to load @github/copilot/sdk: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:57:28.533 [error] [CopilotCLIModels] Failed to fetch available models: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js
+2026-06-28 21:57:29.166 [info] Fetched model metadata in 636ms b0c7479f-407d-454d-b368-86f12373ba7d
+2026-06-28 21:57:29.302 [info] ccreq:484555d4.copilotmd | markdown
+2026-06-28 22:33:07.105 [error] Failed to get all sessions: Error: Cannot find module '/usr/lib/code/extensions/copilot/node_modules/@github/copilot/sdk/index.js' imported from /usr/lib/code/extensions/copilot/dist/extension.js

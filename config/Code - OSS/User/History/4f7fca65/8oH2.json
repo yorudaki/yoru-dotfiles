@@ -1,0 +1,538 @@
+{
+  "produtos": [
+    {
+      "nome_produto": "Parafuso",
+      "valor_produto": 100,
+      "qtde_produto": 72,
+      "categoria_produto": "construção",
+      "id": "jeVUfi6i8cU"
+    },
+    {
+      "nome_produto": "Caneta",
+      "valor_produto": 2,
+      "qtde_produto": 140,
+      "categoria_produto": "material escolar",
+      "id": "d0wpjWX5Ybw"
+    },
+    {
+      "nome_produto": "Lapis",
+      "valor_produto": 1.5,
+      "qtde_produto": 185,
+      "categoria_produto": "material escolar",
+      "id": "kaMJBzrJTj0"
+    },
+    {
+      "nome_produto": "Caderno",
+      "valor_produto": 50,
+      "qtde_produto": 0,
+      "categoria_produto": "material escolar",
+      "id": "NWzikY54D2c"
+    },
+    {
+      "nome_produto": "caneta azul 1",
+      "valor_produto": 12,
+      "qtde_produto": 13,
+      "categoria_produto": "Papelaria",
+      "id": "dA58IIP63-8"
+    },
+    {
+      "nome_produto": "Caneta Preta (BIC) 2016",
+      "valor_produto": 25.64,
+      "qtde_produto": 97,
+      "categoria_produto": "Brinquedos",
+      "id": "7iPuWe_4iHI"
+    },
+    {
+      "nome_produto": "caneta verde",
+      "valor_produto": 145.24,
+      "qtde_produto": 97,
+      "categoria_produto": "Papelaria",
+      "id": "zhz7ENeHuTc"
+    },
+    {
+      "nome_produto": "Caneta Azul",
+      "valor_produto": 25.9,
+      "qtde_produto": 98,
+      "categoria_produto": "Papelaria",
+      "id": "DtAOsyMroMU"
+    }
+  ],
+  "carrinho": [],
+  "vendas": [
+    {
+      "data": "2026-05-31T15:02:32.862Z",
+      "total": 250,
+      "itens": [
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 5,
+          "preco_unitario": 50,
+          "id": "Y2famHdnMPs"
+        }
+      ],
+      "id": "lzJ0fL8hv80"
+    },
+    {
+      "data": "2026-05-31T15:02:34.593Z",
+      "total": 250,
+      "itens": [
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 5,
+          "preco_unitario": 50,
+          "id": "Y2famHdnMPs"
+        }
+      ],
+      "id": "366CF_fWU-g"
+    },
+    {
+      "data": "2026-05-31T15:02:35.166Z",
+      "total": 250,
+      "itens": [
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 5,
+          "preco_unitario": 50,
+          "id": "Y2famHdnMPs"
+        }
+      ],
+      "id": "nO634nqZTxM"
+    },
+    {
+      "data": "2026-05-31T15:03:51.784Z",
+      "total": 250,
+      "itens": [
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 5,
+          "preco_unitario": 50,
+          "id": "Y2famHdnMPs"
+        }
+      ],
+      "id": "XRLNQc7-hZ0"
+    },
+    {
+      "data": "2026-05-31T15:05:18.781Z",
+      "total": 62,
+      "itens": [
+        {
+          "nome_produto": "caneta azul 1",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "id": "M48GqcsZaZE"
+        },
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 1,
+          "preco_unitario": 50,
+          "id": "_eywUVQqRZM"
+        }
+      ],
+      "id": "qwrD679XzNI"
+    },
+    {
+      "data": "2026-05-31T15:24:39.047Z",
+      "total": 87.64,
+      "itens": [
+        {
+          "nome_produto": "Caneta Preta (BIC) 2016",
+          "quantidade": 1,
+          "preco_unitario": 25.64,
+          "id": "T9ib6ZvSbJ8"
+        },
+        {
+          "nome_produto": "caneta azul 1",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "id": "QerrPABgvL8"
+        },
+        {
+          "nome_produto": "Caderno",
+          "quantidade": 1,
+          "preco_unitario": 50,
+          "id": "SVJdGrxoER4"
+        }
+      ],
+      "id": "v11Vfcax4wE"
+    },
+    {
+      "data": "2026-05-31T15:24:44.521Z",
+      "total": 25.64,
+      "itens": [
+        {
+          "nome_produto": "Caneta Preta (BIC) 2016",
+          "quantidade": 1,
+          "preco_unitario": 25.64,
+          "id": "W22lmS0zTcw"
+        }
+      ],
+      "id": "gNLgYfqgVss"
+    },
+    {
+      "data": "2026-05-31T15:26:42.691Z",
+      "total": 37.64,
+      "itens": [
+        {
+          "id_produto": "dA58IIP63-8",
+          "nome_produto": "caneta azul 1",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "id": "yu0V2e2zfpQ"
+        },
+        {
+          "id_produto": "7iPuWe_4iHI",
+          "nome_produto": "Caneta Preta (BIC) 2016",
+          "quantidade": 1,
+          "preco_unitario": 25.64,
+          "id": "xHYQt49F5as"
+        }
+      ],
+      "id": "jfqPQhNRcDg"
+    },
+    {
+      "data": "2026-05-31T15:27:01.329Z",
+      "total": 767.5,
+      "itens": [
+        {
+          "id_produto": "NWzikY54D2c",
+          "nome_produto": "Caderno",
+          "quantidade": 5,
+          "preco_unitario": 50,
+          "id": "mEYJU42JWhk"
+        },
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 5,
+          "preco_unitario": 1.5,
+          "id": "z1348nY1Qn8"
+        },
+        {
+          "id_produto": "d0wpjWX5Ybw",
+          "nome_produto": "Caneta",
+          "quantidade": 5,
+          "preco_unitario": 2,
+          "id": "MJQfRomyjvY"
+        },
+        {
+          "id_produto": "jeVUfi6i8cU",
+          "nome_produto": "Parafuso",
+          "quantidade": 5,
+          "preco_unitario": 100,
+          "id": "b6NapGKVyV0"
+        }
+      ],
+      "id": "6Una1EqbYZ4"
+    },
+    {
+      "data": "2026-05-31T15:27:21.148Z",
+      "total": 1450,
+      "itens": [
+        {
+          "id_produto": "NWzikY54D2c",
+          "nome_produto": "Caderno",
+          "quantidade": 29,
+          "preco_unitario": 50,
+          "id": "MCKEZgWH62Q"
+        }
+      ],
+      "id": "rlcT3xhP_9w"
+    },
+    {
+      "data": "2026-05-31T15:31:31.330Z",
+      "total": 75.64,
+      "itens": [
+        {
+          "id_produto": "NWzikY54D2c",
+          "nome_produto": "Caderno",
+          "quantidade": 1,
+          "preco_unitario": 50,
+          "id": "p4NgbniDn64"
+        },
+        {
+          "id_produto": "7iPuWe_4iHI",
+          "nome_produto": "Caneta Preta (BIC) 2016",
+          "quantidade": 1,
+          "preco_unitario": 25.64,
+          "id": "b6D-h3hsIlM"
+        }
+      ],
+      "id": "p-sek6RuA9Q"
+    },
+    {
+      "data": "2026-05-31T15:31:35.196Z",
+      "total": 50,
+      "itens": [
+        {
+          "id_produto": "NWzikY54D2c",
+          "nome_produto": "Caderno",
+          "quantidade": 1,
+          "preco_unitario": 50,
+          "id": "aQNf6JC4h9g"
+        }
+      ],
+      "id": "W2hCONqiOn8"
+    },
+    {
+      "data": "2026-05-31T15:32:30.393Z",
+      "total": 4900,
+      "itens": [
+        {
+          "id_produto": "NWzikY54D2c",
+          "nome_produto": "Caderno",
+          "quantidade": 98,
+          "preco_unitario": 50,
+          "id": "1R6XsbuqSsc"
+        }
+      ],
+      "id": "0tEB9bHvRFg"
+    },
+    {
+      "data": "2026-06-24T20:07:14.457Z",
+      "total": 103.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "exSkbUwyvXI"
+        },
+        {
+          "id_produto": "d0wpjWX5Ybw",
+          "nome_produto": "Caneta",
+          "quantidade": 1,
+          "preco_unitario": 2,
+          "id": "42iUelQAYh4"
+        },
+        {
+          "id_produto": "jeVUfi6i8cU",
+          "nome_produto": "Parafuso",
+          "quantidade": 1,
+          "preco_unitario": 100,
+          "id": "EXd7ZWIKcrI"
+        }
+      ],
+      "id": "3Ex-GyrTla4"
+    },
+    {
+      "data": "2026-06-24T20:13:31.565Z",
+      "total": 6,
+      "itens": [
+        {
+          "id_produto": "d0wpjWX5Ybw",
+          "nome_produto": "Caneta",
+          "quantidade": 3,
+          "preco_unitario": 2,
+          "id": "WDvzROTfLCY"
+        }
+      ],
+      "id": "EoLe3WNaCc0"
+    },
+    {
+      "data": "2026-06-25T05:34:25.336Z",
+      "total": 131.9,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 4,
+          "preco_unitario": 1.5,
+          "id": "kU43U3Y6daw"
+        },
+        {
+          "id_produto": "DtAOsyMroMU",
+          "nome_produto": "Caneta Azul",
+          "quantidade": 1,
+          "preco_unitario": 25.9,
+          "id": "4ur6qmPmU40"
+        },
+        {
+          "id_produto": "jeVUfi6i8cU",
+          "nome_produto": "Parafuso",
+          "quantidade": 1,
+          "preco_unitario": 100,
+          "id": "CjPUZU9lJdU"
+        }
+      ],
+      "id": "E8udrR6A84Y"
+    },
+    {
+      "data": "2026-06-25T05:50:40.724Z",
+      "total": 290.48,
+      "itens": [
+        {
+          "id_produto": "zhz7ENeHuTc",
+          "nome_produto": "caneta verde",
+          "quantidade": 2,
+          "preco_unitario": 145.24,
+          "id": "Amy5z_ltOlU"
+        }
+      ],
+      "id": "ihm3vm-XTig"
+    },
+    {
+      "data": "2026-06-25T05:52:19.851Z",
+      "total": 1.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "U-JVORI9Xms"
+        }
+      ],
+      "id": "rvI7qXgEBK0"
+    },
+    {
+      "data": "2026-06-25T05:52:21.949Z",
+      "total": 1.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "QbU6evnz8VY"
+        }
+      ],
+      "id": "Cud7Spz2L3A"
+    },
+    {
+      "data": "2026-06-25T05:52:23.663Z",
+      "total": 1.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "tkq-JHKHm2M"
+        }
+      ],
+      "id": "6Z0_Uve6L6g"
+    },
+    {
+      "data": "2026-06-25T05:52:25.604Z",
+      "total": 1.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "BeRGMtyplQw"
+        }
+      ],
+      "id": "WquGWu-mFrM"
+    },
+    {
+      "data": "2026-06-28T16:35:55.945Z",
+      "total": 312.28000000000003,
+      "itens": [
+        {
+          "id_produto": "DtAOsyMroMU",
+          "nome_produto": "Caneta Azul",
+          "quantidade": 1,
+          "preco_unitario": 25.9,
+          "id": "woHnJg-XiR0"
+        },
+        {
+          "id_produto": "zhz7ENeHuTc",
+          "nome_produto": "caneta verde",
+          "quantidade": 1,
+          "preco_unitario": 145.24,
+          "id": "zHXwxzh6qzY"
+        },
+        {
+          "id_produto": "7iPuWe_4iHI",
+          "nome_produto": "Caneta Preta (BIC) 2016",
+          "quantidade": 1,
+          "preco_unitario": 25.64,
+          "id": "yruUlb9aueQ"
+        },
+        {
+          "id_produto": "dA58IIP63-8",
+          "nome_produto": "caneta azul 1",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "id": "clQx0gz8Tcw"
+        },
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "At7BEibJyVs"
+        },
+        {
+          "id_produto": "d0wpjWX5Ybw",
+          "nome_produto": "Caneta",
+          "quantidade": 1,
+          "preco_unitario": 2,
+          "id": "IVjHEXOPINw"
+        },
+        {
+          "id_produto": "jeVUfi6i8cU",
+          "nome_produto": "Parafuso",
+          "quantidade": 1,
+          "preco_unitario": 100,
+          "id": "grFt--iN9f4"
+        }
+      ],
+      "id": "5nMT1MeHnbo"
+    },
+    {
+      "data": "2026-06-30T04:22:49.504Z",
+      "total": 1.5,
+      "itens": [
+        {
+          "id_produto": "kaMJBzrJTj0",
+          "nome_produto": "Lapis",
+          "quantidade": 1,
+          "preco_unitario": 1.5,
+          "id": "VJq6i4USEMo"
+        }
+      ],
+      "id": "KlE64WJwhno"
+    }
+  ],
+  "caixas": [
+    {
+      "data": "2026-06-24T20:47:40.656Z",
+      "dia": 24,
+      "mes": 6,
+      "ano": 2026,
+      "total": 109.5,
+      "venda_ids": [
+        "3Ex-GyrTla4",
+        "EoLe3WNaCc0"
+      ],
+      "id": "NurBNR7f5AY"
+    },
+    {
+      "data": "2026-06-30T04:22:52.461Z",
+      "dia": 30,
+      "mes": 6,
+      "ano": 2026,
+      "total": 1.5,
+      "venda_ids": [
+        "KlE64WJwhno"
+      ],
+      "id": "7IXaeAUVjGk"
+    },
+    {
+      "data": "2026-06-30T04:23:44.934Z",
+      "dia": 30,
+      "mes": 6,
+      "ano": 2026,
+      "total": 1.5,
+      "venda_ids": [
+        "KlE64WJwhno"
+      ],
+      "id": "YvaGlIA0IH4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

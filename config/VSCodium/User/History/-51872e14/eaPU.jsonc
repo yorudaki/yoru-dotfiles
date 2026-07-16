@@ -1,0 +1,303 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    //"width": 1920,
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    
+    "modules-left": [
+        "hyprland/workspaces",
+        "group/media"    
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [            
+        "group/icons",
+        "pulseaudio",
+        "group/g-bluetooth",
+        "group/datetime",
+        "custom/swaync"
+    ],
+    
+    //
+    // MODULE CONFIG
+	//
+	
+
+    // USED MODULES
+    //
+
+    "group/icons":{
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "network",
+            "group/g-language"       
+        ]
+    },
+    "group/g-bluetooth": {
+        "orientation": "horizontal",
+        "modules": [
+            "bluetooth",
+            "custom/text-bluetooth"
+        ]
+    },
+	"hyprland/workspaces": {
+//      "on-scroll-up": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r+1'})\"",		
+//		"on-scroll-down": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r-1'})\"",		
+		"format": "{}",		
+		"format-icons": {
+			"default": " ",
+			"urgent": " ",
+			"active": " "
+		},
+		"sort-by-number": true
+	},
+
+	"hyprland/window": {
+		"format": "{initialTitle}",
+		"tooltip": false
+	},
+
+    "group/media": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/text-mediaicon",
+            "custom/media-animation",
+            "custom/media-now-playing",
+            "group/media-control"
+        ]
+    },
+    "custom/text-mediaicon": { //    
+        "format": "󰎇 "
+    },
+    "custom/media-now-playing": {
+        "exec": "~/.config/waybar/scripts/media-now-playing.sh"        
+    },
+    "custom/media-animation": {
+        "exec": "~/.config/waybar/scripts/media-animation.sh"
+    },
+    "group/media-control": {
+        "orientation": "horizontal",
+        "modules": ["custom/media-previous", "custom/media-playpause", "custom/media-next"]
+    },
+    "custom/media-playpause": {
+        "format": "",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-prev": {
+        "format": " ",
+        "on-click": "playerctl previous"
+    },
+    "custom/media-next": {
+        "format": " ",
+        "on-click": "playerctl next"
+    },
+    
+    "group/g-language": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/text-languageicon",
+            "hyprland/language"
+        ]
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "INTL",
+        "format-pt": "ABNT2"
+    },    
+    "custom/text-languageicon": {
+        "format": "󰌌 ",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10        
+    },
+    
+    "group/datetime": {
+    	"orientation": "horizontal",
+    	"modules": [
+    		"clock#date",
+    		"clock#time"
+    	]
+    },
+    "clock#time": {
+    	"format": "    {:%H:%M}",
+    	"timezone": "America/Sao_Paulo",
+    	"tooltip": false
+    },
+    "clock#date": {
+		"format": "   {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%A}</big>\n<tt><small>{calendar}</small></tt>",    	
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "󰊗   {ifname} (No IP)",
+        "format-disconnected": "󰪎   Disconnected"        
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}  {volume}%",    
+        "format-icons": {            
+            "default": ["", "", " "]
+        },
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh pavucontrol pavucontrol",
+        "scroll-step": 5
+    },
+
+    "custom/swaync": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰪑"            
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -swb",
+        "on-click-right": "swaync-client -d -swb",
+        "escape": true
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format=connected": "󰂱",
+        "format-connected-battery": "󰂱 {icon}",
+        "format-icons": [
+            //low-full
+            " ", " ", " ", " "
+        ],
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueman-manager blueman-manager"        
+    },
+
+    "custom/text-bluetooth": {
+        "format": "Bluetooth",
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueman-manager blueman-manager",
+        "tooltip": false,
+    },
+
+    "mpris": {
+        "player": "spotify",
+        "format": "{player_icon} {status_icon} {artist} - {title}",
+        "format-paused": "{player_icon}  (Paused) {status_icon} {artist} - {title}",
+        "format-stopped": "{player_icon} No music playing",
+
+        "player-icons": {
+            "spotify": "  "
+        },
+
+        "ignored-players": [
+            "firefox", "brave", "zen-browser"
+        ],
+
+        "tooltip": false,
+        "on-click-right": ""
+    },
+
+    //
+    // END
+
+
+
+
+
+
+
+
+
+
+
+    // =========================
+    //      UNUSED MODULES
+    // =========================
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["󰉬", "", "󰉪"]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰃨",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+        
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    }
+
+}

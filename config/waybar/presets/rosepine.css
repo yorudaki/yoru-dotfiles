@@ -1,0 +1,192 @@
+@define-color bg1 #1d2021;
+@define-color bg2 #282828;
+@define-color bg3 #665c54;
+@define-color text #efeaf1;
+@define-color text-dark #8c7686;
+@define-color urgent #a84848;
+@define-color urgent-light #ff7979;
+
+
+* {
+	font-family: JetBrains Mono Nerd Font;
+	font-size: 14px;
+	font-weight: bold;
+	font-feature-settings: "tnum";
+
+	min-height: 0px;
+}
+
+window#waybar {
+	background-color: transparent;
+	color: @text;
+	
+}
+
+/* margin for polar modules */
+#media {
+	margin-left: 4px;
+}
+#custom-swaync {
+	margin-right: 4px;
+}
+
+/* top right bottom left */
+/* Yaxis, Xaxis */
+
+/* ========== DECLARING WRAPPING DECORATIONS ============ */
+
+#window,
+
+#media,#windows,
+#workspaces,
+#g2,#g-language,#g3
+{	
+	background-color: #27272e;
+	padding: 6px 10px;
+
+	border-radius: 10px;
+}
+
+
+/* ========== MODULES LEFT ============ */
+
+#media{
+	padding-right: 5px;	
+}
+
+#custom-text-mediaicon{
+	font-size: 18px;
+}
+#custom-media-animation{
+	padding: 0px 5px;
+}
+#custom-media-now-playing{
+	min-width: 150px;	
+
+	font-family: JetBrainsMono Nerd Font, Sarasa Mono, monospace;
+	padding: 0px 10px 0px 5px;
+}
+
+#custom-media-playpause,#custom-media-next,#custom-media-prev{
+	padding: 0px 5px 0px 5px;
+	
+}
+#custom-media-playpause{
+	font-size: 19px;
+	padding: 0px 1px 0px 5px;
+}
+
+
+/* hover */
+#media-control{
+	color: @text; /* #484848*/
+}
+#custom-media-playpause:hover,#custom-media-next:hover,#custom-media-prev:hover{
+	color: @light1; /* #ffffff */
+	transition: color 150ms ease-in-out;
+}
+/* end */
+
+#custom-text-windowcounticon{
+	font-size: 18px;
+	padding-right: 2px;
+}
+
+
+/* =========== MODULES CENTER =============== */
+
+/* WORKSPACES */
+#workspaces {
+	
+}
+
+#workspaces button {
+	border-radius: 0px;
+	padding: 0 10px;
+	color: @text-dark;
+
+	background-color: transparent;
+	box-shadow: none;
+
+	transition: color 150ms ease-in-out;
+}
+
+#workspaces button:hover {
+	color: @light1;
+	background-color: transparent;
+}
+
+#workspaces button.active {
+	color: @text;
+}
+#workspaces button.active:hover{
+	color: @text;
+}
+
+#workspaces button.urgent {
+	color: @urgent;	
+}
+#workspaces button.urgent:hover {
+	color: @urgent-light;
+}
+/* END */
+
+/* ===========  MODULES RIGHT =============== */
+
+/* hover for multiple modules */
+#bluetooth:hover, #pulseaudio:hover, #custom-swaync:hover{
+	color: @light1;
+	transition: color 150ms ease-in-out;
+}
+/* end */
+
+#custom-swaync,
+#network,
+#bluetooth {
+	font-size: 15px;
+}
+
+.blueman {
+    opacity: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#language /* small */ {
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#clock.time {
+	margin-right: 15px;	
+}
+
+#custom-swaync /* fixed ? */ {
+	font-size: 16px; 
+	padding-right: 11px;
+	padding-left: 15px;
+}
+
+/* ========== ICON CONFIGURATIONS ========== */
+
+#bluetooth /* icon */ { 
+	font-size: 17px;
+	padding-right: 15px;
+}
+
+#network /* icon */ {
+	font-size: 15px;
+	margin-left: 12px;
+	margin-right: 5px;
+
+	
+}
+
+#custom-text-languageicon /* icon */ {
+	font-size: 18px;
+
+	
+}
+
+

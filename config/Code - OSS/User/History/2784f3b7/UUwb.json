@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.initialHint": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "chat.viewSessions.orientation": "stacked"
+}
