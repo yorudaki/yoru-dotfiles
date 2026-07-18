@@ -1,5 +1,9 @@
+atlauncher-bin
 bibata-cursor-theme
 graphite-gtk-theme
 libcava
+skeuos-gtk
+wallust-git
+whitesur-gtk-theme-git
 zapzap
 zscroll-git

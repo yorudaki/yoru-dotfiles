@@ -1,8 +1,0 @@
-hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("playerctld daemon")
-    hl.exec_cmd("waybar")
-    hl.exec_cmd(notificationCenter)
-    hl.exec_cmd("vesktop --start-minimized")
-    hl.exec_cmd("steam -silent")
-end)

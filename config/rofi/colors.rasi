@@ -1,0 +1,22 @@
+* {
+    background:     #12121E;
+    foreground:     #BBA2A2;
+
+    color0:         #151523;
+    color1:         #3F3F55;
+    color2:         #51516E;
+    color3:         #756482;
+    color4:         #756482;
+    color5:         #75698F;
+    color6:         #936A86;
+    color7:         #BBA2A2;
+
+    color8:         #2A2A38;
+    color9:         #3F3F55;
+    color10:        #51516E;
+    color11:        #756482;
+    color12:        #756482;
+    color13:        #75698F;
+    color14:        #936A86;
+    color15:        #BBA2A2;
+}

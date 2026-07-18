@@ -1,7 +1,0 @@
-terminal    = "ghostty"
-fileManager = "nautilus"
-menu        = "rofi -show drun"
-colorPicker = "hyprpicker -an"
-emoji = ""
-print = "grimblast --freeze copysave area ~/Screenshots/"
-notificationCenter = "swaync"

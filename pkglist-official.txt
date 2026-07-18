@@ -63,6 +63,7 @@ ffmpegthumbnailer
 firefox
 fsarchiver
 fuse2
+gedit
 ghostty
 git
 glances
@@ -135,6 +136,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntfs-3g
+nwg-look
 obs-studio
 opencl-mesa
 openssh
@@ -214,6 +216,7 @@ sudo
 swaync
 sysfsutils
 texinfo
+thunar
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -254,3 +257,4 @@ xl2tpd
 xorg-xhost
 yay
 zen-browser-bin
+zerotier-one
