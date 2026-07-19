@@ -17,3 +17,6 @@ hypr.target = '~/.config/hypr/colors.lua'
 
 rofi.template = 'rofi.rasi'
 rofi.target = '~/.config/rofi/colors.rasi'
+
+swaync.template = 'swaync.css'
+swaync.target = '~/.config/swaync/colors.css'
