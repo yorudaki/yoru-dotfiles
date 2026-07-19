@@ -1,3 +1,0 @@
-@define-color fg {{foreground}};
-@define-color bg {{background}};
-@define-color bg-alt rgba ({{background | rgb}},0.25);

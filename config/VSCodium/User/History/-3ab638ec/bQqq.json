@@ -1,9 +1,0 @@
-{
-    "editor.fontFamily": "'FiraCode Nerd Font'",
-    "editor.fontSize": 14,
-    "editor.fontWeight": "600",
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Catppuccin Macchiato",
-    "workbench.iconTheme": "catppuccin-frappe",
-    "terminal.integrated.initialHint": false
-}

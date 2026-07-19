@@ -1,7 +1,0 @@
-{
-    "terminal.integrated.initialHint": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "chat.viewSessions.orientation": "stacked",
-    "workbench.editor.empty.hint": "hidden",
-    "explorer.confirmDelete": false
-}
