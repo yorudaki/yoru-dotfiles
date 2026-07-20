@@ -95,12 +95,12 @@ hl.config({
         rounding       = 8,
         rounding_power = 8,
 
-        dim_inactive = true,
+        dim_inactive = false,
         dim_strength = 0.2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.8,
+        inactive_opacity = 0.9,
 
         shadow = {
             enabled      = true,
@@ -302,6 +302,7 @@ hl.workspace_rule({ workspace = 1, persistent = true })
 hl.workspace_rule({ workspace = 2, persistent = true })
 hl.workspace_rule({ workspace = 3, persistent = true })
 hl.workspace_rule({ workspace = 4, persistent = true })
+hl.workspace_rule({ workspace = 5, persistent = true })
 
 hl.config({
   cursor = {

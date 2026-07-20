@@ -39,9 +39,7 @@
 
 window#waybar {
 	background-color: #282828;
-	color: @text;
-
-	box-shadow: inset 0 -3px 0 @
+	color: @text;	
 }
 
 
@@ -114,6 +112,7 @@ window#waybar {
 	font-size: 18px;
 }
 #custom-media-animation{
+	color: @fg;
 	padding: 0px 5px;
 }
 #custom-media-now-playing{
@@ -151,7 +150,9 @@ window#waybar {
 	font-size: 18px;
 	padding-right: 2px;
 }
-
+#windowcount{
+	color: @fg;
+}
 
 /* =========== MODULES CENTER =============== */
 
@@ -198,7 +199,7 @@ window#waybar {
 /* ===========  MODULES RIGHT =============== */
 
 /* hover for multiple modules */
-#bluetooth:hover, #pulseaudio:hover, #custom-swaync:hover{
+#bluetooth:hover, #pulseaudio:hover, #custom-swaync:hover, #clock.date:hover{
 	color: @fg;
 	transition: color 150ms ease-in-out;
 }
@@ -219,7 +220,7 @@ window#waybar {
 
 #language /* small */ {
 	font-size: 11px;
-	color: #ffffff;
+	color: @fg;
 }
 
 #clock.time {
