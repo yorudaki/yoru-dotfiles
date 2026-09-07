@@ -19,13 +19,13 @@ cd .. && rm -rf yay
 ### 2. Official packages
 
 ```bash
-sudo pacman -S --needed - < pkglist-official.txt
+sudo pacman -S --needed - < updating/pkglist-official.txt
 ```
 
 ### 3. AUR packages
 
 ```bash
-yay -S --needed - < pkglist-aur.txt
+yay -S --needed - < updating/pkglist-aur.txt
 ```
 
 ### 4. Waybar (build from source)
@@ -43,15 +43,16 @@ cd .. && rm -rf Waybar
 
 ### 5. Dotfiles
 
-Make a backup of the .config folder
+OPTIONAL - Make a backup of the current .config folder
+
 ```bash
 mv ~/.config ~/backconfig
 ```
 
-Copy the .config folder from the dotfiles
+Copy the config folder from the dotfiles
 
 ```bash
-cp -r .config ~/
+cp -r config/* ~/.config/
 ```
 
 ### 6. System configuration
@@ -72,12 +73,39 @@ sudo cp -r usr/share/sddm/themes/sddm-astronaut-theme /usr/share/sddm/themes/
 chmod +x ~/.config/waybar/scripts/*.sh
 ```
 
+```bash
+chmod +x ~/.config/hypr/scripts/*.sh
+```
+
 ### 8. User services
 
 ```bash
 systemctl --user enable --now hyprpaper.service
 systemctl --user enable --now hyprpolkitagent.service
 ```
+
+---
+
+## Wallpaper
+
+### Theme script
+
+```bash
+~/.config/hypr/scripts/wallsetup.sh
+```
+#### How it works
+
+- Generates a color palette from an image using wallust
+    ! The path must not be relative
+
+```bash
+wallust run ~/.config/img/IMG.png.jpg.webp
+```
+
+- Sets the image as wallpaper using hyprpaper
+
+- Applies the generated palette and refresh all affected applications
+    ! If the terminal is GHOSTTY, the configuration must be reloaded manually
 
 ---
 
@@ -103,40 +131,59 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 ### zsh
 
-Verificar se está instalado
+Verify if zsh is installed:
 
 ```bash
 which zsh
 ```
-Caso não esteja
+If not:
 
 ```bash
 sudo pacman -S --needed zsh
 ```
 
-Alterar shell padrão
+Change default shell
 
 ```bash
-chsh -s /usr/bin/zsh  # ou seja qual for a saída de `which zsh`
+chsh -s /usr/bin/zsh # or whichever is the output of 'which ...'
 ```
----
-
-## Rofi — AppImages
-
-O script `~/.config/waybar/scripts/toggle-window.sh` gerencia o toggle de janelas (bluetooth, áudio, etc).
-
-Para listar e executar AppImages via Rofi, use o modo script:
-
-```bash
-rofi -show appimages -modi "appimages:~/.config/rofi/scripts/appimage-menu.sh"
-```
-
-> Veja `~/.config/rofi/scripts/appimage-menu.sh` para configurar o diretório de AppImages.
 
 ---
 
-## Observações
+## Autologin
 
-- O **cursor** (Bibata-Modern-Ice) e as **fontes** são instalados via AUR/pacman — nenhuma cópia manual necessária.
-- O **tema GTK** (Graphite-Dark-compact) é instalado via AUR — as configurações em `.config/gtk-3.0/` e `.config/gtk-4.0/` são aplicadas automaticamente ao copiar os dotfiles.
-- O `micro` vem com colorschemes Catppuccin e sintaxe estendida pré-configurados em `.config/micro/`.
+```bash
+sudo nano /etc/sddm.conf.d/autologin.conf
+```
+
+Insert the following
+
+```bash
+[Autologin]
+User=USER
+Session=SESSION
+```
+
+Replace 'USER' and 'SESSION' with the current user and session
+
+```bash
+ls /usr/share/wayland-sessions/ && whoami
+```
+
+---
+
+## Keeping Up
+
+### Fetching system packages
+
+Pacman Packages
+
+```bash
+pacman -Qqen
+```
+
+AUR Packages
+
+```bash
+pacman -Qqem
+```
