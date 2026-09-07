@@ -1,0 +1,193 @@
+@define-color bg rgba(30, 30, 30, 1);
+@define-color bg1 #2c2c2c;
+@define-color dark1 rgba(10, 10, 10, 1);
+@define-color dark2 rgba(35, 35, 35, 1);
+@define-color dark3 #ffffff1f;
+@define-color dark4 rgba(80, 80, 80, 1);
+@define-color highlight #ffffff3f;
+
+* {
+	font-family: FiraSans, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-feature-settings: "tnum";
+
+	min-height: 0px;
+}
+
+window#waybar {
+	background-color: @bg;
+	color: #ffffff;		
+}
+
+/* top right bottom left */
+/* Yaxis, Xaxis */
+
+/* ========== DECLARING WRAPPING DECORATIONS ============ */
+
+#window,
+
+#media,#windows,
+#workspaces,
+#icons,#pulseaudio,#bluetooth,#datetime,#custom-swaync 
+{
+	background-color: @dark1;
+	border-radius: 8px;
+
+	margin: 5px 5px;
+	padding: 0px 15px 0px 15px;
+
+	box-shadow: inset 0 -2px 0 @dark4;
+}
+
+/* ========== MODULES LEFT ============ */
+
+#media{
+	padding-right: 5px;
+}
+
+#custom-text-mediaicon{
+	font-size: 18px;
+}
+#custom-media-animation{
+	padding: 0px 5px;
+}
+#custom-media-now-playing{
+	min-width: 250px;	
+
+	font-family: FiraSans Mono, Sarasa Mono, monospace;	
+	font-style: italic;		
+
+	padding: 0px 10px 0px 5px;
+}
+
+#custom-media-playpause,#custom-media-next,#custom-media-prev{
+	padding: 0px 5px 0px 5px;	
+	
+}
+#custom-media-playpause{
+	font-size: 19px;
+	padding: 0px 1px 0px 5px;
+}
+#custom-media-next {
+}
+
+/* hover */
+#custom-media-playpause,#custom-media-next,#custom-media-prev{
+	color: #ffffff; /* #484848*/
+}
+#custom-media-playpause:hover,#custom-media-next:hover,#custom-media-prev:hover{
+	color: #848484; /* #ffffff */
+	transition: color 150ms ease-in-out;
+}
+/* end */
+
+#custom-text-windowcounticon{
+	font-size: 18px;
+	padding-right: 2px;
+}
+
+
+/* =========== MODULES CENTER =============== */
+
+/* WORKSPACES */
+#workspaces {
+    background: @dark1;    
+
+    padding: 2px 4px 4px 4px;
+	
+}
+
+#workspaces button {
+    background: @bg;
+	color: transparent;
+	
+    margin: 2px 4px 2px 4px;	
+    padding: 0px 6px;
+
+    border-radius: 6px;
+
+	transition: all 200ms ease-in-out;
+}
+
+#workspaces button:hover {
+	color: transparent;
+	box-shadow: none;
+	text-shadow: none;
+	background: #313131;
+	
+	transition: all 90ms ease-in-out;
+
+	padding: 0px 10px;
+}
+
+#workspaces button.focused,
+#workspaces button.active {		
+	background: #5b5b5b; 
+	color: #ffffff;
+
+	padding: 0px 18px;
+}
+
+#workspaces button.urgent {
+	color: #ff6060;	
+}
+/* END */
+
+/* ===========  MODULES RIGHT =============== */
+
+/* hover for multiple modules */
+#bluetooth:hover, #pulseaudio:hover{
+	color: #848484;
+	transition: color 150ms ease-in-out;
+}
+/* end */
+
+#custom-swaync,
+#network,
+#bluetooth {
+	font-size: 15px;
+}
+
+.blueman {
+    opacity: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#bluetooth /* icon */ { 
+	font-size: 17px;
+}
+
+/* BLUETOOTH ANIMATION */
+
+/* END */
+
+
+#network /* icon */ {
+	font-size: 15px;
+	margin-left: 12px;
+	margin-right: 14px;
+}
+
+#custom-text-languageicon /* icon */ {
+	font-size: 18px;
+}
+#language /* small */ {
+	font-size: 9px;
+}
+
+#clock /* fixed ? */ { 
+	
+}
+
+#clock.time {
+	margin-left: 5px;	
+}
+
+#custom-swaync /* fixed ? */ {
+	font-size: 16px; 
+	padding-right: 20px;
+}
+
