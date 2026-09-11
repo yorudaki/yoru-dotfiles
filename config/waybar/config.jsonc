@@ -1,64 +1,51 @@
-{    
+{
     "height": 35,
     "spacing": 0,
-    
+
+    // MAIN LAYOUT //
     "modules-left": [
         "group/media"
     ],
     "modules-center": [
-        "group/m-c"
-        
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "group/m-r"
     ],
-    
-    // modules groupings (bg color purposes)
-    "group/m-c":{
+
+    // ======================================================================= //
+    //  MODULE CONTAINERS
+    // ======================================================================= //
+    "group/media": {
         "orientation": "horizontal",
         "modules": [
-        //"group/windows",
-          "hyprland/workspaces"
-        ]        
+            "custom/text-mediaicon",
+            "custom/media-animation",
+            "custom/media-now-playing",
+            "group/media-control"
+        ],
+        "tooltip": false
     },
-    
-    "group/m-r":{
+    "group/media-control": {
         "orientation": "horizontal",
         "modules": [
-          "group/icons",
-          "pulseaudio",
-          "bluetooth",
-          "group/g-language",
-          "group/datetime",
-          "custom/powermenu"
+            "custom/media-prev",
+            "custom/media-playpause",
+            "custom/media-next"
         ]
     },
-    //
-
-    //
-    // MODULE CONFIG
-	//
-	
-    //separator
-    "custom/separator":{
-        "format": ""
-    },
-    //
-
-    //groupings
-    "group/g2":{
+    "group/m-r": {
         "orientation": "horizontal",
         "modules": [
             "group/icons",
+            "pulseaudio",
             "bluetooth",
-            "pulseaudio"            
+            "hyprland/language",
+            "group/datetime",
+            "custom/powermenu"
         ]
-    },   
-    //
-
-    // USED MODULES
-    //
-    "group/icons":{
+    },
+    "group/icons": {
         "orientation": "horizontal",
         "modules": [
             "tray",
@@ -66,29 +53,58 @@
             "custom/swaync"
         ]
     },
-    "group/g-bluetooth": {
+    "group/g-language": {
         "orientation": "horizontal",
         "modules": [
-            "bluetooth",
-            "custom/text-bluetooth"
+            "custom/text-languageicon",
+            "hyprland/language"
         ]
     },
-	"hyprland/workspaces": {
-//      "on-scroll-up": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r+1'})\"",		
-//		"on-scroll-down": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r-1'})\"",		
-		"format": "{icon}{windows}",
-		"format-icons": {
-//			"default": " ",
-//			"urgent": " ",
-//			"active": " "
-            "10": " "
-		},
-        "active-only": false,
-		"sort-by-number": true,
+    "group/datetime": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#time",
+            "clock#date"
+        ]
+    },
 
+    // ======================================================================= //
+    //  ACTIVE MODULES
+    // ======================================================================= //
+
+    // ----- Media ----- //
+    "custom/text-mediaicon": {
+        "format": "󰎇 "
+    },
+    "custom/media-now-playing": {
+        "exec": "~/.config/waybar/scripts/media-now-playing.sh"
+    },
+    "custom/media-animation": {
+        "exec": "~/.config/waybar/scripts/media-animation.sh"
+    },
+    "custom/media-playpause": {
+        "format": "󰐎 ",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-prev": {
+        "format": " ",
+        "on-click": "playerctl previous"
+    },
+    "custom/media-next": {
+        "format": " ",
+        "on-click": "playerctl next"
+    },
+
+    // ----- Workspaces ----- //
+    "hyprland/workspaces": {
+        "format": "{icon}{windows}",        
+        "format-icons": {
+            "10": " "
+        },
+        "active-only": false,
+        "sort-by-number": true,
         "format-window-separator": "",
         "window-rewrite-default": "  ",
-
         "window-rewrite": {
             "class<firefox>": "  ",
             "class<org.mozilla.firefox>": "  ",
@@ -109,125 +125,22 @@
             "class<blueberry.py>": "  ",
             "class<spotify>": "  ",
             "class<spotify-launcher>": "  ",
-            "class<steam>": " 󰓓 ",
-    }
-        
-	},
-
-	"hyprland/window": {
-		"format": "{icon}",
-        "icon": true,
-		"tooltip": false
-	},
-
-    "group/windows":{
-        "orientation": "horizontal",
-        "modules": ["custom/text-windowcounticon","hyprland/windowcount"]
-    },
-    "hyprland/windowcount": {
-        "format": "{}"        
-    },
-    "custom/text-windowcounticon":{
-        "format": "󱂬 "
+            "class<steam>": " 󰓓 "
+        }
     },
 
-    "group/media": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/text-mediaicon",
-            "custom/media-animation",
-            "custom/media-now-playing",
-            "group/media-control"
-        ],
-        "tooltip": false
-    },
-    "custom/text-mediaicon": { //    
-        "format": "󰎇 "
-    },
-    "custom/media-now-playing": {
-        "exec": "~/.config/waybar/scripts/media-now-playing.sh"        
-    },
-    "custom/media-animation": {
-        "exec": "~/.config/waybar/scripts/media-animation.sh"
-    },
-    "group/media-control": {
-        "orientation": "horizontal",
-        "modules": ["custom/media-prev", "custom/media-playpause", "custom/media-next"]
-    },
-    "custom/media-playpause": {
-        "format": "󰐎 ",
-        "on-click": "playerctl play-pause"
-    },
-    "custom/media-prev": {
-        "format": " ",
-        "on-click": "playerctl previous"
-    },
-    "custom/media-next": {
-        "format": " ",
-        "on-click": "playerctl next"
-    },
-    
-    "group/g-language": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/text-languageicon",
-            "hyprland/language"
-        ]        
-    },
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "INTL",
-        "format-pt": "ABNT2",
-        "on-click": "hyprctl switchxkblayout all next"
-    },    
-    "custom/text-languageicon": {
-        "format": "󰌌 ",
-        "tooltip": false,
-        "on-click": "hyprctl switchxkblayout all next"
-    },
-
+    // ----- System / Status -----
     "tray": {
         "icon-size": 17,
-        "spacing": 10        
+        "spacing": 10
     },
-    
-    "group/datetime": {
-    	"orientation": "horizontal",
-    	"modules": [
-    		"clock#time",
-    		"clock#date"
-    	]
-    },
-    "clock#time": {
-    	"format": "{:%H:%M}",
-    	"timezone": "America/Sao_Paulo",
-    	"tooltip": false
-    },
-    "clock#date": {
-		"format": "{:%d/%m/%Y}",
-        "on-click": "",
-        "tooltip": false,
-        "escape": true
-    },
-
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "󰊗   {ifname} (No IP)",
-        "format-disconnected": "󰪎"        
+        "format-disconnected": "󰪎"
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",    
-        "format-icons": {            
-            "default": ["", "", " "]
-        },
-        "on-click": "~/.config/waybar/scripts/toggle-window.sh pavucontrol pavucontrol",
-        "scroll-step": 2
-    },
-
     "custom/swaync": {
         "tooltip": false,
         "format": "{icon}",
@@ -235,7 +148,7 @@
             "notification": "󱅫",
             "none": "󰂜",
             "dnd-notification": "󰂛",
-            "dnd-none": "󰪑"            
+            "dnd-none": "󰪑"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
@@ -244,164 +157,45 @@
         "on-click-right": "swaync-client -d -swb",
         "escape": true
     },
-
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh pavucontrol pavucontrol",
+        "scroll-step": 2
+    },
     "bluetooth": {
-        "format": "",
+        "format": "  ",
         "format-disabled": "󰂲 ",
         "format=connected": "󰂱 ",
         "format-connected-battery": "󰂱 {icon}",
-        "format-icons": [
-            //low-full
-            " ", " ", " ", " "
-        ],
+        "format-icons": [" ", " ", " ", " "],
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry"        
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry"
+    },        
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "INTL",
+        "format-pt": "ABNT2",
+        "on-click": "hyprctl switchxkblayout all next"
     },
-
+    "clock#time": {
+        "format": "{:%H:%M}",
+        "timezone": "America/Sao_Paulo",
+        "tooltip": false
+    },
+    "clock#date": {
+        "format": "{:%d/%m/%Y}",        
+        "tooltip": false,
+        "escape": true
+    },
     "custom/powermenu": {
         "format": "  ",
         "tooltip": false,
         "on-click": "~/.config/hypr/scripts/powermenu.sh"
-    },
-
-    "custom/text-bluetooth": {
-        "format": "Bluetooth",
-        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry",
-        "tooltip": false,
-    },
-
-    "mpris": {
-        "player": "spotify",
-        "format": "{player_icon} {status_icon} {artist} - {title}",
-        "format-paused": "{player_icon}  (Paused) {status_icon} {artist} - {title}",
-        "format-stopped": "{player_icon} No music playing",
-
-        "player-icons": {
-            "spotify": "  "
-        },
-
-        "ignored-players": [
-            "firefox", "brave", "zen-browser"
-        ],
-
-        "tooltip": false,
-        "on-click-right": ""
-    },
-    //
-    // END
-
-
-
-    /*
-    // CSS BACKUP CONFIGS
-     BLUETOOTH ANIMATION
-
-#custom-text-bluetooth{
-	font-size: 0px;	
-	color: transparent;
-
-	padding: 0px;
-	margin: 0px;
-
-	transition: all 0.25s cubic-bezier(0.25, 0.50, 0.25, 1);
-}
-#bluetooth {
-	margin-right: 0px;
-	padding: 0px 2px;;
-}
-#g-bluetooth:hover {
-	padding: 0px 16px;
-}
-#g-bluetooth:hover #custom-text-bluetooth {
-	font-size: 15px;
-	color: #ffffff;
-	margin-left: 8px;
-}
-    */
-
-
-
-
-
-
-
-    // =========================
-    //      UNUSED MODULES
-    // =========================
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["󰉬", "", "󰉪"]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰃨",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-        
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    },
-
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
     }
-
 }

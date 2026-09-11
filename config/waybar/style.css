@@ -1,3 +1,8 @@
+/* ==========================================================================
+	COLORS
+   ========================================================================== */
+@import 'colors.css';
+
 @define-color bg1 #1d2021;
 @define-color bg2 #282828;
 @define-color bg3 #665c54;
@@ -26,233 +31,204 @@
 @define-color pink-light #d3869b;
 @define-color purple-light #b88ee3;
 
-@import 'colors.css';
-
+/* ==========================================================================
+	GENERAL RULES
+   ========================================================================== */
 * {
-	font-family: JetBrains Mono Nerd Font;
-	font-size: 14px;
-	font-weight: bold;
-	font-feature-settings: "tnum";
-
-	min-height: 0px;
+    font-family: JetBrains Mono Nerd Font;
+    font-size: 14px;
+    font-weight: bold;
+    font-feature-settings: "tnum";
+    min-height: 0px;
 }
 
 window#waybar {
-	background-color: #282828;
-	color: @text;	
+    background-color: #282828;
+    color: @text;
 }
 
-
-/* margin for polar modules */
-#media {
-	margin-left: 0px;
-}
-#custom-powermenu {
-	margin-left: 2px;
-}
-
-/* top right bottom left */
-/* Yaxis, Xaxis */
-
-/* ========== DECLARING WRAPPING DECORATIONS ============ */
-
+/* Global base container */
 #window,
-
-#media,#windows,
-#icons,#pulseaudio,#bluetooth,#g-language,#datetime, #custom-powermenu
-{	
-	padding: 2px 10px 0px 10px;
-	background-color: @bg1;
-	margin-bottom: 2px;
+#media,
+#windows,
+#icons,
+#pulseaudio,
+#bluetooth,
+#language,
+#datetime,
+#custom-powermenu {
+    padding: 2px 10px 0px 10px;
+    background-color: @bg1;
+    margin-bottom: 2px;
 }
 
-#m-r
-{
-	background-color: @bg1;
+#m-r {
+    background-color: @bg1;
 }
 
-#icons, #pulseaudio, #bluetooth, #g-language
-{
-	margin-right: 2px;
-}
-
-/* ============ COLORING BOX SHADOW ============== */
-
-#media {
-	box-shadow: inset 0 -3px 0 @color5;
-}
-#windows {
-	box-shadow: inset 0 -3px 0 @color10;
-}
-
-/* color for workspaces is in it's general configs */
-
-#icons {
-	box-shadow: inset 0 -3px 0 @color6;
-}
-#bluetooth {
-	box-shadow: inset 0 -3px 0 @color1;
-}
-#g-language {
-	box-shadow: inset 0 -3px 0 @color10;
-}
-#pulseaudio {
-	box-shadow: inset 0 -3px 0 @color12;	
-}
+/* Spacing between modules (right) */
+#icons,
+#pulseaudio,
+#bluetooth,
+#language,
 #datetime {
-	box-shadow: inset 0 -3px 0 @color15;
+    margin-right: 2px;
 }
+
+/* ==========================================================================
+	BOX-SHADOW
+   ========================================================================== */
+
+#media,
+#windows,
+#icons,
+#bluetooth,
+#language,
+#pulseaudio,
+#datetime,
 #custom-powermenu {
 	box-shadow: inset 0 -3px 0 @fg;
-	background-color: @bg;
-	color: @fg;
 }
 
-/* ========== MODULES LEFT ============ */
-
-#media{
-	padding-right: 5px;	
+/* ==========================================================================
+	LEFT MODULES
+   ========================================================================== */
+#media {
+    margin-left: 0px;
+    padding-right: 5px;
 }
 
-#custom-text-mediaicon{
-	font-size: 18px;
-}
-#custom-media-animation{
-	color: @color5;
-	padding: 0px 5px;
-}
-#custom-media-now-playing{
-	min-width: 250px;	
-
-	font-family: JetBrainsMono Nerd Font, Sarasa Mono, monospace;
-	padding: 0px 10px 0px 5px;
+#custom-text-mediaicon {
+    font-size: 18px;
 }
 
-#custom-media-playpause,#custom-media-next,#custom-media-prev{
-	padding: 0px 5px 0px 5px;
-	
-}
-#custom-media-playpause{
-	font-size: 19px;
-	padding: 0px 1px 0px 5px;
+#custom-media-animation {
+    color: @fg;
+    padding: 0px 5px;
 }
 
-
-/* hover */
-#media-control{
-	color: @text; /* #484848*/
-}
-#custom-media-playpause:hover,#custom-media-next:hover,#custom-media-prev:hover{
-	color: @color5; /* #ffffff */
-	transition: color 150ms ease-in-out;
+#custom-media-now-playing {
+    min-width: 250px;
+    font-family: JetBrainsMono Nerd Font, Sarasa Mono, monospace;
+    padding: 0px 10px 0px 5px;
 }
 
-#custom-media-playpause,#custom-media-next,#custom-media-prev{
-	transition: color 150ms ease-in-out;
+#media-control {
+    color: @text;
 }
-/* end */
+
+#custom-media-playpause,
+#custom-media-next,
+#custom-media-prev {
+    padding: 0px 5px;
+    transition: color 150ms ease-in-out;
+}
+
+#custom-media-playpause {
+    font-size: 19px;
+    padding: 0px 1px 0px 5px;
+}
+
+#custom-media-playpause:hover,
+#custom-media-next:hover,
+#custom-media-prev:hover {
+    color: @fg;
+    transition: color 150ms ease-in-out;
+}
 
 #windows {
-	margin-right: 2px;
+    margin-right: 2px;
 }
 
-#custom-text-windowcounticon{
-	font-size: 18px;
-	padding-right: 2px;
-}
-#windowcount{
-	color: @text;
+#custom-text-windowcounticon {
+    font-size: 18px;
+    padding-right: 2px;
 }
 
-/* =========== MODULES CENTER =============== */
+#windowcount {
+    color: @text;
+}
 
-/* WORKSPACES */
+/* ==========================================================================
+	MIDDLE MODULES
+   ========================================================================== */
 #workspaces {
-	background-color: @bg1;
-
-	
+    background-color: @bg1;
 }
 
 #workspaces button {
-	border-radius: 0px;
-	padding: 0 10px;
-	color: @text-dark;
-	margin-bottom: 1px;
-
-	background-color: transparent;
-	box-shadow: none;
-}
-
-#workspaces button:hover {
-	color: @color14;
-	background-color: transparent;	
+    border-radius: 0px;
+    padding: 0 10px;
+    color: @text-dark;
+    margin-bottom: 1px;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 #workspaces button.active {
 	color: @text;
-
 	padding-bottom: 4px;
-	box-shadow: inset 0 -3px 0 @color14;	
-}
-#workspaces button.active:hover{
-	color: @text;
+	box-shadow: inset 0 -3px 0 @fg;
 }
 
 #workspaces button.urgent {
-	color: @red-light;	
+	color: @red-light;
 }
+
+/* transition and hover */
+#workspaces button, #workspaces button:hover{
+	transition: all 150ms ease-in-out;
+}
+
+#workspaces button:hover {
+    color: @bg;
+    background-color: @fg;
+}
+
+
+#workspaces button.active:hover {
+    color: @text;
+	background-color: transparent;
+}
+
+
 #workspaces button.urgent:hover {
-	color: @red-dark;
-}
-/* END */
-
-/* ===========  MODULES RIGHT =============== */
-
-/* hover for multiple modules */
-#custom-swaync:hover {
-	color: @color6;
+    color: @red-dark;
 }
 
-#pulseaudio:hover {
-	color: @color12;
-}
-
-#bluetooth:hover {
-	color: @color1;
-}
-
-#g-language:hover #custom-text-languageicon:hover, #language:hover {
-	color: @color10;
-}
-
-#clock.date:hover {
-	color: @color15;
-}
-
-#custom-text-languageicon:hover, #language:hover, #bluetooth:hover, #pulseaudio:hover, #custom-swaync:hover, #clock.date:hover{	
-	transition: color 150ms ease-in-out;
-}
-#custom-text-languageicon, #language, #bluetooth, #pulseaudio, #custom-swaync, #clock.date {
-	transition: color 150ms ease-in-out;
-}
-
-#custom-powermenu {
-	box-shadow: inset 0 -3px 0 @fg;
-	background-color: @bg;
-	color: @fg;
-	transition: all 250ms ease-in-out;
-}
-#custom-powermenu:hover {	
-	background-color: @fg;
-	color: @bg;
-	transition: all 250ms ease-in-out;
-}
-/* end */
-
+/* ==========================================================================
+	RIGHT MODULES
+   ========================================================================== */
 #custom-swaync,
 #network,
 #bluetooth {
-	font-size: 15px;
+    font-size: 15px;
+}
+
+#language {
+	font-size: 13px;
+}
+
+#custom-swaync {
+    font-size: 16px;
+    padding-right: 3px;
+}
+
+#bluetooth {
+    font-size: 17px;
+}
+
+#network {
+    font-size: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-right: 8px;
+    color: #ffffff;
+}
+
+
+#clock.time {
+    margin-right: 15px;
 }
 
 .blueman {
@@ -262,40 +238,47 @@ window#waybar {
     margin: 0;
 }
 
-#language /* small */ {
-	font-size: 11px;
-	color: white;
+/* Transitions and hover */
+#language,
+#bluetooth,
+#pulseaudio,
+#custom-swaync,
+#custom-powermenu {
+    transition: all 150ms ease-in-out;
 }
 
-#clock.time {
-	margin-right: 15px;	
-}
-#network {
-	padding-right: 8px;
-}
-#custom-swaync /* fixed ? */ {
-	font-size: 16px;
-	padding-right: 3px;
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-swaync:hover,
+#custom-powermenu:hover {
+    transition: all 150ms ease-in-out;
 }
 
-/* ========== ICON CONFIGURATIONS ========== */
+/* --------- --------- --------- */
 
-#bluetooth /* icon */ { 
-	font-size: 17px;
+#custom-swaync:hover {
+    color: @fg;
 }
 
-#network /* icon */ {
-	font-size: 15px;
-	margin-left: 12px;
-	margin-right: 12px;
-
-	color: #ffffff;
+#pulseaudio:hover,
+#bluetooth:hover,
+#language:hover,
+#custom-powermenu:hover {
+    background-color: @fg;
+	color: @bg;
 }
 
-#custom-text-languageicon /* icon */ {
-	font-size: 18px;
-
-	color: #ffffff
+/* ----- Powermenu ----- */
+#ustom-powermenu {
+    margin-left: 2px;
+    box-shadow: inset 0 -3px 0 @fg;
+    background-color: @bg;
+    color: @fg;
+    transition: all 150ms ease-in-out;
 }
 
-
+#ustom-powermenu:hover {
+    background-color: @fg;
+    color: @bg;
+    transition: all 150ms ease-in-out;
+}

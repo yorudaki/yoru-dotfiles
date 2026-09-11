@@ -17,7 +17,7 @@
     "group/m-c":{
         "orientation": "horizontal",
         "modules": [
-          "group/windows",
+        //"group/windows",
           "hyprland/workspaces"
         ]        
     },
@@ -29,7 +29,8 @@
           "pulseaudio",
           "bluetooth",
           "group/g-language",
-          "group/datetime"
+          "group/datetime",
+          "custom/powermenu"
         ]
     },
     //
@@ -75,17 +76,46 @@
 	"hyprland/workspaces": {
 //      "on-scroll-up": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r+1'})\"",		
 //		"on-scroll-down": "hyprctl dispatch \"hl.dsp.focus({workspace = 'r-1'})\"",		
-		"format": "{}",		
+		"format": "{icon}{windows}",
 		"format-icons": {
-			"default": " ",
-			"urgent": " ",
-			"active": " "
+//			"default": " ",
+//			"urgent": " ",
+//			"active": " "
+            "10": " "
 		},
-		"sort-by-number": true
+        "active-only": false,
+		"sort-by-number": true,
+
+        "format-window-separator": "",
+        "window-rewrite-default": "  ",
+
+        "window-rewrite": {
+            "class<firefox>": "  ",
+            "class<org.mozilla.firefox>": "  ",
+            "class<zen>": " 󰐾 ",
+            "class<vesktop>": "  ",
+            "class<discord>": "  ",
+            "class<alacritty>": "  ",
+            "class<kitty>": " 󰄛 ",
+            "class<com.mitchellh.ghostty>": " 󰊠 ",
+            "class<code-oss>": " 󰨞 ",
+            "class<codium>": "  ",
+            "class<brave-browser>": " 󰋙 ",
+            "class<com.rtosta.zapzap>": "  ",
+            "class<qalculate-gtk>": "  ",
+            "class<thunar>": " 󰉋 ",
+            "class<com.github.flxzt.rnote>": " 󱞁 ",
+            "class<org.pulseaudio.pavucontrol>": " 󱀞 ",
+            "class<blueberry.py>": "  ",
+            "class<spotify>": "  ",
+            "class<spotify-launcher>": "  ",
+            "class<steam>": " 󰓓 ",
+    }
+        
 	},
 
 	"hyprland/window": {
-		"format": "",
+		"format": "{icon}",
         "icon": true,
 		"tooltip": false
 	},
@@ -142,16 +172,18 @@
         "modules": [
             "custom/text-languageicon",
             "hyprland/language"
-        ]
+        ]        
     },
     "hyprland/language": {
         "format": "{}",
         "format-en": "INTL",
-        "format-pt": "ABNT2"
+        "format-pt": "ABNT2",
+        "on-click": "hyprctl switchxkblayout all next"
     },    
     "custom/text-languageicon": {
         "format": "󰌌 ",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "hyprctl switchxkblayout all next"
     },
 
     "tray": {
@@ -173,7 +205,9 @@
     },
     "clock#date": {
 		"format": "{:%d/%m/%Y}",
-        "tooltip-format": "<big>{:%A}</big>\n<tt><small>{calendar}</small></tt>",    	
+        "on-click": "",
+        "tooltip": false,
+        "escape": true
     },
 
     "network": {
@@ -182,7 +216,7 @@
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "󰊗   {ifname} (No IP)",
-        "format-disconnected": "󰪎   Disconnected"        
+        "format-disconnected": "󰪎"        
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -191,7 +225,7 @@
             "default": ["", "", " "]
         },
         "on-click": "~/.config/waybar/scripts/toggle-window.sh pavucontrol pavucontrol",
-        "scroll-step": 5
+        "scroll-step": 2
     },
 
     "custom/swaync": {
@@ -224,12 +258,18 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueman-manager blueman-manager"        
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry"        
+    },
+
+    "custom/powermenu": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
     },
 
     "custom/text-bluetooth": {
         "format": "Bluetooth",
-        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueman-manager blueman-manager",
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry",
         "tooltip": false,
     },
 

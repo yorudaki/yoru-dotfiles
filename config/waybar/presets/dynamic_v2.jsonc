@@ -1,0 +1,201 @@
+{
+    "height": 35,
+    "spacing": 0,
+
+    // MAIN LAYOUT //
+    "modules-left": [
+        "group/media"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "group/m-r"
+    ],
+
+    // ======================================================================= //
+    //  MODULE CONTAINERS
+    // ======================================================================= //
+    "group/media": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/text-mediaicon",
+            "custom/media-animation",
+            "custom/media-now-playing",
+            "group/media-control"
+        ],
+        "tooltip": false
+    },
+    "group/media-control": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/media-prev",
+            "custom/media-playpause",
+            "custom/media-next"
+        ]
+    },
+    "group/m-r": {
+        "orientation": "horizontal",
+        "modules": [
+            "group/icons",
+            "pulseaudio",
+            "bluetooth",
+            "hyprland/language",
+            "group/datetime",
+            "custom/powermenu"
+        ]
+    },
+    "group/icons": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "network",
+            "custom/swaync"
+        ]
+    },
+    "group/g-language": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/text-languageicon",
+            "hyprland/language"
+        ]
+    },
+    "group/datetime": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#time",
+            "clock#date"
+        ]
+    },
+
+    // ======================================================================= //
+    //  ACTIVE MODULES
+    // ======================================================================= //
+
+    // ----- Media ----- //
+    "custom/text-mediaicon": {
+        "format": "󰎇 "
+    },
+    "custom/media-now-playing": {
+        "exec": "~/.config/waybar/scripts/media-now-playing.sh"
+    },
+    "custom/media-animation": {
+        "exec": "~/.config/waybar/scripts/media-animation.sh"
+    },
+    "custom/media-playpause": {
+        "format": "󰐎 ",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-prev": {
+        "format": " ",
+        "on-click": "playerctl previous"
+    },
+    "custom/media-next": {
+        "format": " ",
+        "on-click": "playerctl next"
+    },
+
+    // ----- Workspaces ----- //
+    "hyprland/workspaces": {
+        "format": "{icon}{windows}",        
+        "format-icons": {
+            "10": " "
+        },
+        "active-only": false,
+        "sort-by-number": true,
+        "format-window-separator": "",
+        "window-rewrite-default": "  ",
+        "window-rewrite": {
+            "class<firefox>": "  ",
+            "class<org.mozilla.firefox>": "  ",
+            "class<zen>": " 󰐾 ",
+            "class<vesktop>": "  ",
+            "class<discord>": "  ",
+            "class<alacritty>": "  ",
+            "class<kitty>": " 󰄛 ",
+            "class<com.mitchellh.ghostty>": " 󰊠 ",
+            "class<code-oss>": " 󰨞 ",
+            "class<codium>": "  ",
+            "class<brave-browser>": " 󰋙 ",
+            "class<com.rtosta.zapzap>": "  ",
+            "class<qalculate-gtk>": "  ",
+            "class<thunar>": " 󰉋 ",
+            "class<com.github.flxzt.rnote>": " 󱞁 ",
+            "class<org.pulseaudio.pavucontrol>": " 󱀞 ",
+            "class<blueberry.py>": "  ",
+            "class<spotify>": "  ",
+            "class<spotify-launcher>": "  ",
+            "class<steam>": " 󰓓 "
+        }
+    },
+
+    // ----- System / Status -----
+    "tray": {
+        "icon-size": 17,
+        "spacing": 10
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "󰊗   {ifname} (No IP)",
+        "format-disconnected": "󰪎"
+    },
+    "custom/swaync": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -swb",
+        "on-click-right": "swaync-client -d -swb",
+        "escape": true
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh pavucontrol pavucontrol",
+        "scroll-step": 2
+    },
+    "bluetooth": {
+        "format": "  ",
+        "format-disabled": "󰂲 ",
+        "format=connected": "󰂱 ",
+        "format-connected-battery": "󰂱 {icon}",
+        "format-icons": [" ", " ", " ", " "],
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/toggle-window.sh blueberry blueberry"
+    },        
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "INTL",
+        "format-pt": "ABNT2",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+    "clock#time": {
+        "format": "{:%H:%M}",
+        "timezone": "America/Sao_Paulo",
+        "tooltip": false
+    },
+    "clock#date": {
+        "format": "{:%d/%m/%Y}",        
+        "tooltip": false,
+        "escape": true
+    },
+    "custom/powermenu": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    }
+}
