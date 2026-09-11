@@ -11,11 +11,17 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd(colorPicker))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(print))
-hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd(emoji))
+--hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd(emoji))
+hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"))
 
 ---- MANAGE LAYOUT
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))    -- dwindle only
+-- resizing (keyboard)
+hl.bind(mainMod .. " + F9", hl.dsp.window.resize({x = -200, y = 0, relative = true}))
+hl.bind(mainMod .. " + F10", hl.dsp.window.resize({x = 0, y = 150, relative = true}))
+hl.bind(mainMod .. " + F11", hl.dsp.window.resize({x = 0, y = -150, relative = true}))
+hl.bind(mainMod .. " + F12", hl.dsp.window.resize({x = 200, y = 0, relative = true}))
 -- move focus
 hl.bind(mainMod .. "+" .. vimLeft, hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. "+" .. vimRight, hl.dsp.focus({ direction = "right" }))
@@ -38,10 +44,10 @@ hl.bind(mainMod.. " + SHIFT +" .. vimDown, hl.dsp.window.swap({ direction = "dow
 hl.bind(mainMod .. " + mouse:275", hl.dsp.focus({ workspace = "e+1" })) -- mouse5 (next)
 hl.bind(mainMod .. " + mouse:276", hl.dsp.focus({ workspace = "e-1" })) -- mouse4 (prev)
 -- keyboard
-hl.bind(mainMod .. " + P", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + O", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.move({ workspace = "e+1" }))
-hl.bind(mainMod .. " + SHIFT + O", hl.dsp.window.move({ workspace = "e-1" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "e+1" }))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "e-1" }))
 -- switch workspaces with mainMod + [0-9]
 -- move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do

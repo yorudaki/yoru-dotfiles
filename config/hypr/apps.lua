@@ -1,5 +1,5 @@
 terminal    = "ghostty"
-fileManager = "nautilus"
+fileManager = "thunar"
 menu        = "rofi -show drun"
 colorPicker = "hyprpicker -an"
 emoji = ""

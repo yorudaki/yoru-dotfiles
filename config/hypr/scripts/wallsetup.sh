@@ -12,7 +12,7 @@ echo "Color palette generated!"
 # Set hyprpaper wallpaper
 echo " "
 echo "Applying wallpaper (hyprpaper)..."
-cat " " > $conf
+echo " " > $conf
 echo "wallpaper {" >> $conf
 echo "	monitor = " >> $conf
 echo "	path = $wallpaper" >> $conf

@@ -8,6 +8,8 @@ require("colors")
 require("apps")
 require("keybinds")
 require("autostart")
+require("rules")
+--require("window-nofollow")
 
 ------------------
 ---- MONITORS ----
@@ -73,7 +75,7 @@ hl.env("GTK_THEME", "Skeuos-Grey-Dark")
 hl.config({
     general = {
         gaps_in  = 2,
-        gaps_out = 10,
+        gaps_out = 4,
 
         border_size = 2,
 
@@ -92,8 +94,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 8,
-        rounding_power = 8,
+        rounding       = 0,
+        rounding_power = 0,
 
         dim_inactive = false,
         dim_strength = 0.2,
@@ -104,7 +106,7 @@ hl.config({
 
         shadow = {
             enabled      = true,
-            range        = 25,
+            range        = 12,
             render_power = 4,
             color        = 0x66000000,
             scale        = 1,
@@ -136,9 +138,9 @@ hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dam
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 2.7,  bezier = "easeOutQuint" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 2.7,  bezier = "easeOutQuint",         style = "popin 87%" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.4,  bezier = "easeOutQuint",       style = "popin 87%" })
 hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
@@ -310,28 +312,9 @@ hl.config({
   }
 })
 
-hl.window_rule({
-  match = { class = "blueman-manager" },
-  float = true,
-  size  = { 460, 500 },
-  move  = { "100%-480", "40" },
-  pin   = true,
-})
-
-hl.window_rule({
-  match = { class = "org.pulseaudio.pavucontrol"},
-  float = true,
-  size  = { 1000, 500 },
-  move  = { "100%-480", "40" },
-  pin   = true,
-})
-
-hl.window_rule({
-	match = { class = "steam_app_4162040"},
-	float = true,
-})
-
-hl.window_rule({
-	match = { class = "dev.musagy.hypremoji"},
-	float = true,
+hl.window_rule({    
+    match = {
+        content = "game"
+    },
+    workspace = "5"
 })
