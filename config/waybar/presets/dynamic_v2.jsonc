@@ -4,7 +4,7 @@
 
     // MAIN LAYOUT //
     "modules-left": [
-        "group/media"
+        "group/m-l"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -14,7 +14,30 @@
     ],
 
     // ======================================================================= //
-    //  MODULE CONTAINERS
+    //  GENERAL CONTAINERS
+    // ======================================================================= //
+
+    "group/m-l": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/powermenu",
+            "group/media"
+        ]
+    },
+    "group/m-r": {
+        "orientation": "horizontal",
+        "modules": [
+            "group/icons",
+            "pulseaudio",
+            "bluetooth",
+            "hyprland/language",
+            "group/datetime",
+            "custom/swaync"
+        ]
+    },
+
+    // ======================================================================= //
+    //  GROUPINGS
     // ======================================================================= //
     "group/media": {
         "orientation": "horizontal",
@@ -34,23 +57,12 @@
             "custom/media-next"
         ]
     },
-    "group/m-r": {
-        "orientation": "horizontal",
-        "modules": [
-            "group/icons",
-            "pulseaudio",
-            "bluetooth",
-            "hyprland/language",
-            "group/datetime",
-            "custom/powermenu"
-        ]
-    },
+
     "group/icons": {
         "orientation": "horizontal",
         "modules": [
             "tray",
-            "network",
-            "custom/swaync"
+            "network"
         ]
     },
     "group/g-language": {
@@ -109,6 +121,7 @@
             "class<firefox>": "  ",
             "class<org.mozilla.firefox>": "  ",
             "class<zen>": " 󰐾 ",
+            "class<chromium>": " 󰊯 ",
             "class<vesktop>": "  ",
             "class<discord>": "  ",
             "class<alacritty>": "  ",
@@ -136,7 +149,7 @@
     },
     "network": {
         "format-wifi": "",
-        "format-ethernet": "",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "󰊗   {ifname} (No IP)",
         "format-disconnected": "󰪎"
@@ -194,7 +207,7 @@
         "escape": true
     },
     "custom/powermenu": {
-        "format": "  ",
+        "format": " 󰽥 ",
         "tooltip": false,
         "on-click": "~/.config/hypr/scripts/powermenu.sh"
     }
